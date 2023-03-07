@@ -1,0 +1,224 @@
+<!-- Chris Carlton CSS Framework -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background-color: #f0f8ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .grid {
+        text-align: center;
+        display: grid;
+        grid-template-areas:
+          "Title"
+          "Typography"
+          "head"
+          "Images"
+          "IMG"
+          "Buttons"
+          "Button"
+          "Links"
+          "Link";
+        grid-template-columns: 1fr;
+      }
+
+      .Title {
+        grid-area: Title;
+        /* border-style: solid;
+        border-color: grey; */
+      }
+
+      .Typography {
+        grid-area: Typography;
+        border-style: solid;
+        border-color: grey;
+      }
+
+      /* h1-h6 */
+      .headers {
+        grid-area: head;
+        font-family: "Times New Roman";
+      }
+
+      .headers h1 {
+        font-weight: bold;
+      }
+
+      .headers h2 {
+        font-weight: 700;
+      }
+
+      .headers h3 {
+        font-weight: 600;
+      }
+
+      .headers h4 {
+        font-weight: 500;
+      }
+
+      .headers h5 {
+        font-weight: normal;
+      }
+
+      .headers h6 {
+        font-weight: 400;
+      }
+
+      .headers p {
+        font-weight: normal;
+        font-size: 18px;
+      }
+
+      .Images {
+        grid-area: Images;
+        border-style: solid;
+        border-color: grey;
+      }
+
+      /* images */
+      .IMG {
+        grid-area: IMG;
+        padding: 40px;
+      }
+
+      .IMG img {
+        max-height: 300px;
+        max-width: 300px;
+      }
+
+      .framed {
+        max-height: 300px;
+        max-width: 300px;
+        border-style: solid;
+        border-color: silver;
+        border-width: 10px;
+      }
+
+      .Buttons {
+        grid-area: Buttons;
+        border-style: solid;
+        border-color: grey;
+      }
+
+      .Button {
+        grid-area: Button;
+        padding: 40px;
+      }
+
+      .Button button {
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+      .Button .default {
+        background-color: black;
+        border: none;
+        color: white;
+      }
+
+      .Button button:disabled {
+        border: 2px solid black;
+        background-color: #cccccc;
+        color: #666666;
+      }
+
+      .Button .success {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+      }
+
+      .Button .error {
+        background-color: red;
+        border: none;
+        color: white;
+      }
+
+      .Links {
+        grid-area: Links;
+        border-style: solid;
+        border-color: grey;
+      }
+
+      .Link {
+        grid-area: Link;
+        padding: 40px;
+      }
+
+      .Link a {
+        padding: 10px;
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="grid">
+    <div class="Title">
+      <h1>CSS Framework</h1>
+      <p>Author: Chris Carlton</p>
+    </div>
+    <div class="Typography">
+      <h1>Typography</h1>
+    </div>
+    <div class="headers">
+      <h1>Header 1 (h1)</h1>
+      <h2>Header 2 (h2)</h2>
+      <h3>Header 3 (h3)</h3>
+      <h4>Header 4 (h4)</h4>
+      <h5>Header 5 (h5)</h5>
+      <h6>Header 6 (h6)</h6>
+      <p>p (p)</p>
+    </div>
+    <div class="Images">
+      <h1>Images</h1>
+    </div>
+    <div class="IMG">
+      <figure>
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Desktop Image"
+        />
+        <figcaption>Default image</figcaption>
+      </figure>
+      <figure>
+        <img
+          class="framed"
+          src="https://wallpaperaccess.com/full/1536061.jpg"
+          alt="Desktop Image"
+        />
+        <figcaption>Framed image</figcaption>
+      </figure>
+    </div>
+    <div class="Buttons">
+      <h1>Buttons</h1>
+    </div>
+    <div class="Button">
+      <button class="default">button</button>
+      <button disabled>disabled button</button>
+      <button class="success">success button</button>
+      <button class="error">error button</button>
+    </div>
+    <div class="Links">
+      <h1>Links</h1>
+    </div>
+    <div class="Link">
+      <a href="https://www.chapman.edu/">Chapman University</a>
+    </div>
+  </body>
+</html>
